@@ -122,9 +122,9 @@ export const routineB: Routine = {
 };
 
 export const routineC: Routine = {
-  "name": "Rutina C: Pausas Activas & Oficina (Invisible/Baño)",
-  "estimated-time": "5 - 10 minutos (Discontinuo a lo largo del día)",
-  "number-cycles": "Realizar ejercicios sueltos cada 90-120 min o aprovechar visitas al baño",
+  "name": "Rutina C: Pausas Activas & Oficina",
+  "estimated-time": "5 - 10 minutos",
+  "number-cycles": "Ejercicios sueltos cada 90-120 min",
   "exercises": [
     {
       "id": "C1",

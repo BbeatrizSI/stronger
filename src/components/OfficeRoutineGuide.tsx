@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { type Routine, type Exercise } from '../data/routines'
+import { useState, useMemo } from 'react'
+import { type Routine } from '../data/routines'
 import ExerciseCard from './ExerciseCard'
 
 interface OfficeRoutineGuideProps {
@@ -18,14 +18,10 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function OfficeRoutineGuide({ routine, onFinish }: OfficeRoutineGuideProps) {
-  const [shuffledExercises, setShuffledExercises] = useState<Exercise[]>([])
+  // Mezclar ejercicios al iniciar usando useMemo
+  const shuffledExercises = useMemo(() => shuffleArray(routine.exercises), [routine.exercises])
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0)
   const [completedExercises, setCompletedExercises] = useState<Set<string>>(new Set())
-
-  // Mezclar ejercicios al iniciar
-  useEffect(() => {
-    setShuffledExercises(shuffleArray(routine.exercises))
-  }, [routine.exercises])
 
   const currentExercise = shuffledExercises[currentExerciseIndex]
   const totalExercises = shuffledExercises.length
@@ -64,6 +60,10 @@ export default function OfficeRoutineGuide({ routine, onFinish }: OfficeRoutineG
     const nextIndex = shuffledExercises.findIndex(ex => ex.id === nextExercise.id)
     
     setCurrentExerciseIndex(nextIndex)
+  }
+
+  const handleNextExerciseClick = () => {
+    handleNextExercise()
   }
 
   if (shuffledExercises.length === 0) {
@@ -155,7 +155,7 @@ export default function OfficeRoutineGuide({ routine, onFinish }: OfficeRoutineG
         {!completedExercises.has(currentExercise.id) && (
           <div className="mt-4 text-center">
             <button
-              onClick={handleNextExercise}
+              onClick={handleNextExerciseClick}
               className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-semibold"
             >
               🔀 Siguiente Ejercicio Aleatorio

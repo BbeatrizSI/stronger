@@ -31,7 +31,7 @@ export default function ExerciseCard({ exercise, exerciseNumber, totalExercises,
         {exercise.imageUrl && (
           <div className="mb-4 rounded-full overflow-hidden shadow-md h-40 w-40">
             <img 
-              src={exercise.imageUrl} 
+              src={`${import.meta.env.BASE_URL}${exercise.imageUrl.replace(/^\//, '')}`}
               alt={exercise.name}
               className="w-full h-auto object-cover"
             />

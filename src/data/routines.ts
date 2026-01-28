@@ -6,6 +6,7 @@ export interface Exercise {
   "pro-version": string;
   muscles: string;
   img: string;
+  imageUrl?: string;
 }
 
 export interface Routine {
@@ -22,39 +23,43 @@ export const routineA: Routine = {
   "exercises": [
     {
       "id": "A1",
-      "name": "Hip Thrust con Goma y Pausa",
+      "name": "Hip Thrust con Goma",
       "repetitions": "15-20 reps (aguantando 3 seg arriba)",
       "material": "Goma elástica (rodillas) + Pesas 2kg (cadera) + Sofá",
       "pro-version": "Aumentar el tiempo isométrico arriba a 5 segundos y usar una goma de mayor resistencia.",
       "muscles": "Glúteo mayor, Glúteo medio",
-      "img": "Mujer apoyando escápulas en sofá, goma sobre rodillas, elevando cadera hasta la horizontal."
+      "img": "Mujer apoyando escápulas en sofá, goma sobre rodillas, elevando cadera hasta la horizontal.",
+      "imageUrl": "/exercises/hip-trust.png"
     },
     {
       "id": "A2",
-      "name": "Sentadilla Búlgara Asistida",
+      "name": "Sentadilla Búlgara",
       "repetitions": "10 reps por pierna",
       "material": "Silla/Sofá (para apoyar empeine trasero) + Pared (equilibrio)",
       "pro-version": "Soltar la pared y sostener las pesas de 2kg en las manos (brazos muertos a los lados).",
       "muscles": "Cuádriceps, Glúteo, Estabilidad de rodilla",
-      "img": "Zancada estática con el pie trasero elevado en un banco o sofá."
+      "img": "Zancada estática con el pie trasero elevado en un banco o sofá.",
+      "imageUrl": "/exercises/bulgarian.png"
     },
     {
       "id": "A3",
-      "name": "Apresiones de Aductor con Aro",
+      "name": "Presiones de Abductores con Aro",
       "repetitions": "20 reps lentas",
       "material": "Aro de Pilates + Mat",
       "pro-version": "Elevar ligeramente los pies del suelo (posición Table Top) manteniendo lumbar neutra mientras aprietas.",
       "muscles": "Aductores (interior muslo), Suelo pélvico",
-      "img": "Tumbada boca arriba, rodillas flexionadas, aro entre las rodillas apretando hacia dentro."
+      "img": "Tumbada boca arriba, rodillas flexionadas, aro entre las rodillas apretando hacia dentro.",
+      "imageUrl": "/exercises/abductions.png"
     },
     {
       "id": "A4",
-      "name": "Monster Walk (Caminata Lateral)",
+      "name": "Monster Walk",
       "repetitions": "1 minuto (30 seg cada dirección)",
       "material": "Goma elástica (tobillos)",
       "pro-version": "Bajar más el centro de gravedad (más sentadilla) y poner la goma en la punta de los pies.",
       "muscles": "Glúteo medio (estabilizador de cadera)",
-      "img": "De pie, rodillas semiflexionadas, caminando lateralmente como un cangrejo con resistencia."
+      "img": "De pie, rodillas semiflexionadas, caminando lateralmente como un cangrejo con resistencia.",
+      "imageUrl": "/exercises/monster.png"
     },
     {
       "id": "A5",
@@ -63,7 +68,8 @@ export const routineA: Routine = {
       "material": "Fitball",
       "pro-version": "Hacer pequeños círculos con los codos ('remover la olla') sin mover la cadera.",
       "muscles": "Transverso abdominal, Core profundo",
-      "img": "Posición de plancha apoyando los antebrazos sobre el balón suizo."
+      "img": "Posición de plancha apoyando los antebrazos sobre el balón suizo.",
+      "imageUrl": "/exercises/planks.png"
     }
   ]
 };
@@ -80,7 +86,8 @@ export const routineB: Routine = {
       "material": "Goma elástica (en pomo puerta o pies)",
       "pro-version": "Aguantar 2 segundos en el punto de máxima contracción (atrás).",
       "muscles": "Dorsal, Romboides (corrector postural)",
-      "img": "Sentada o de pie, tirando de la goma hacia las costillas, codos pegados al cuerpo."
+      "img": "Sentada o de pie, tirando de la goma hacia las costillas, codos pegados al cuerpo.",
+      "imageUrl": "/exercises/row.png"
     },
     {
       "id": "B2",
@@ -89,7 +96,8 @@ export const routineB: Routine = {
       "material": "Pesas 2kg + Silla",
       "pro-version": "Hacer la bajada (fase excéntrica) muy lenta, en 3 o 4 segundos.",
       "muscles": "Deltoides posterior, Trapecio medio",
-      "img": "Sentada, tronco inclinado adelante, abriendo brazos en cruz hacia el techo."
+      "img": "Sentada, tronco inclinado adelante, abriendo brazos en cruz hacia el techo.",
+      "imageUrl": "/exercises/bird.png"
     },
     {
       "id": "B3",
@@ -98,7 +106,8 @@ export const routineB: Routine = {
       "material": "Goma elástica (anclada a puerta)",
       "pro-version": "Alejarse un paso más de la puerta para aumentar la tensión de la goma.",
       "muscles": "Oblicuos, Multífidos (protección lumbar)",
-      "img": "De pie de perfil a la goma, estirando brazos al frente resistiendo el giro."
+      "img": "De pie de perfil a la goma, estirando brazos al frente resistiendo el giro.",
+      "imageUrl": "/exercises/press.png"
     },
     {
       "id": "B4",
@@ -107,7 +116,8 @@ export const routineB: Routine = {
       "material": "Pared",
       "pro-version": "Hacerlos apoyada en una mesa robusta o encimera (más inclinado = más peso).",
       "muscles": "Pectoral, Tríceps, Deltoides anterior",
-      "img": "Flexiones de brazos realizadas de pie contra la pared."
+      "img": "Flexiones de brazos realizadas de pie contra la pared.",
+      "imageUrl": "/exercises/pulls.png"
     },
     {
       "id": "B5",
@@ -116,7 +126,8 @@ export const routineB: Routine = {
       "material": "Fitball + Mat",
       "pro-version": "Presionar el balón con más fuerza entre mano y rodilla antes de mover las extremidades libres.",
       "muscles": "Core anterior, Coordinación lumbopélvica",
-      "img": "Tumbada boca arriba, sujetando balón con mano y rodilla contraria, estirando las otras extremidades."
+      "img": "Tumbada boca arriba, sujetando balón con mano y rodilla contraria, estirando las otras extremidades.",
+      "imageUrl": "/exercises/bug.png"
     }
   ]
 };
@@ -133,7 +144,8 @@ export const routineC: Routine = {
       "material": "Ninguno (se puede hacer de pie o sentada)",
       "pro-version": "Hacerlo a una sola pierna (apoyando el peso en una y contrayendo ese glúteo sin moverte).",
       "muscles": "Glúteo mayor",
-      "img": "De pie, apretar ambos glúteos con fuerza como si quisieras sostener una moneda entre ellos."
+      "img": "De pie, apretar ambos glúteos con fuerza como si quisieras sostener una moneda entre ellos.",
+      "imageUrl": "/exercises/gluteo.png"
     },
     {
       "id": "C2",
@@ -142,7 +154,8 @@ export const routineC: Routine = {
       "material": "Mesa o silla (para leve apoyo)",
       "pro-version": "Hacerlo a una sola pierna para añadir equilibrio y carga.",
       "muscles": "Gemelos, Sóleo (mejora retorno venoso)",
-      "img": "De pie, subir y bajar de puntillas rítmicamente."
+      "img": "De pie, subir y bajar de puntillas rítmicamente.",
+      "imageUrl": "/exercises/points.png"
     },
     {
       "id": "C3",
@@ -151,7 +164,8 @@ export const routineC: Routine = {
       "material": "Lavabo (apoyo de manos)",
       "pro-version": "Hacerlo sin apoyo de manos, controlando solo con el abdomen.",
       "muscles": "Abdominales bajos, Zona lumbar (descompresión L5-S1)",
-      "img": "Manos en lavabo, movimiento sutil de pelvis 'escondiendo el culete' y volviendo a neutro."
+      "img": "Manos en lavabo, movimiento sutil de pelvis 'escondiendo el culete' y volviendo a neutro.",
+      "imageUrl": "/exercises/hip.png"
     },
     {
       "id": "C4",
@@ -160,7 +174,8 @@ export const routineC: Routine = {
       "material": "Ninguno",
       "pro-version": "Contraer el glúteo de la pierna trasera para intensificar el estiramiento frontal.",
       "muscles": "Psoas ilíaco (flexor de cadera)",
-      "img": "Posición de zancada corta, empujando cadera adelante sin arquear lumbares."
+      "img": "Posición de zancada corta, empujando cadera adelante sin arquear lumbares.",
+      "imageUrl": "/exercises/psoas.png"
     },
     {
       "id": "C5",
@@ -169,7 +184,8 @@ export const routineC: Routine = {
       "material": "Pared (idealmente en el baño para privacidad)",
       "pro-version": "Bajar la cadera hasta que esté alineada con las rodillas (90 grados).",
       "muscles": "Cuádriceps, Glúteo",
-      "img": "Espalda apoyada en pared, piernas flexionadas como sentada en silla invisible."
+      "img": "Espalda apoyada en pared, piernas flexionadas como sentada en silla invisible.",
+      "imageUrl": "/exercises/sit.png"
     },
     {
       "id": "C6",
@@ -178,7 +194,8 @@ export const routineC: Routine = {
       "material": "Marco de una puerta",
       "pro-version": "Variar la altura de los brazos (más arriba o más abajo) para estirar fibras distintas.",
       "muscles": "Pectoral mayor y menor",
-      "img": "Antebrazos apoyados en los laterales de una puerta, dando un paso al frente."
+      "img": "Antebrazos apoyados en los laterales de una puerta, dando un paso al frente.",
+      "imageUrl": "/exercises/breast.png"
     },
     {
       "id": "C7",
@@ -187,7 +204,8 @@ export const routineC: Routine = {
       "material": "Mesa (apoyo manos)",
       "pro-version": "Mantener la pierna extendida atrás 3 segundos apretando glúteo.",
       "muscles": "Glúteo mayor, Isquios",
-      "img": "De pie frente a mesa, llevar pierna recta hacia atrás suavemente sin arquear espalda."
+      "img": "De pie frente a mesa, llevar pierna recta hacia atrás suavemente sin arquear espalda.",
+      "imageUrl": "/exercises/extension.png"
     }
   ]
 };

@@ -14,8 +14,8 @@ export default function ExerciseCard({ exercise, exerciseNumber, totalExercises,
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6 max-w-2xl mx-auto">
       {/* Exercise Header */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-2">
+      <div className="mb-6 flex flex-col items-center">
+        <div className="flex items-center justify-between mb-2 w-full">
           <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
             {exercise.id}
           </span>
@@ -23,9 +23,20 @@ export default function ExerciseCard({ exercise, exerciseNumber, totalExercises,
             {exerciseNumber}/{totalExercises}
           </span>
         </div>
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">
           {exercise.name}
         </h2>
+        
+        {/* Exercise Image */}
+        {exercise.imageUrl && (
+          <div className="mb-4 rounded-full overflow-hidden shadow-md h-40 w-40">
+            <img 
+              src={exercise.imageUrl} 
+              alt={exercise.name}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
       </div>
 
       {/* Exercise Info */}
